@@ -16,6 +16,32 @@ export const subjectsColors = {
   economics: "#C8FFDF",
 };
 
+export const companionCardsConstants = [
+  {
+  id:'123', 
+  subject:'Science',
+  duration:45 ,
+  color:'#E5D0FF',
+  topic:'Neural Network of the Brain', 
+  name:'Neura the Brainy Explorer'
+},
+  {
+  id:'456', 
+  subject:'Maths',
+  duration:30 ,
+  color:'#FFDA6E',
+  topic:'Derivatives & Integrals', 
+  name:'Countsy the Number Wizard'
+},
+  {
+  id:'789', 
+  subject:'Language',
+  duration:30 ,
+  color:'#BDE7FF',
+  topic:'English Literature ', 
+  name:'Verba the Vocabulary Builder'
+},
+]
 export const voices = {
   male: { casual: "2BJW5coyhAzSr8STdHbE", formal: "c6SfcYrb2t09NHXiT80T" },
   female: { casual: "ZIlrSGI4jZqobxRKprJz", formal: "sarah" },

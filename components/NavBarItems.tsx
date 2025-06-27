@@ -17,6 +17,7 @@ const items: { label: string; href: string }[] = [
 
 const NavBarItems = () => {
   const pathname = usePathname();
+  console.log(pathname);
   return (
     <nav className="flex items-center gap-4">
       {items.map((item) => (

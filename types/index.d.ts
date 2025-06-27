@@ -81,3 +81,7 @@ interface CompanionComponentProps {
   voice: string;
   style: string;
 }
+
+export interface companionCards{
+  
+}
