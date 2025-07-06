@@ -3,16 +3,14 @@ import { Button } from "./ui/button";
 import Link from "next/link";
 
 interface companionsCardProps {
-  item: {
-    id: string;
-    subject: string;
-    duration: number;
-    color: string;
-    topic: string;
-    name: string;
-  };
+  id: string;
+  subject: string;
+  duration: number;
+  color: string;
+  topic: string;
+  name: string;
 }
-const CompanionCard = ({ item }: companionsCardProps) => {
+const CompanionCard = (item: companionsCardProps) => {
   const { id, color, duration, subject, topic, name } = item;
   return (
     <article className={`companion-card `} style={{ backgroundColor: color }}>

@@ -9,7 +9,7 @@ const Page = () => {
       <h1>Popular Companions</h1>
       <section className="companions-grid">
         {companionCardsConstants.map((item) => (
-          <CompanionCard item={item} key={item.id} />
+          <CompanionCard {...item} key={item.id} />
         ))}
       </section>
       <section className="home-section">

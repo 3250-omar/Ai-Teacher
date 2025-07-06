@@ -25,9 +25,7 @@ import { Textarea } from "./ui/textarea";
 import { createCompanion } from "@/lib/actions/companion-action";
 import { redirect } from "next/navigation";
 
-
-
-// the schema of the form 
+// the schema of the form
 const formSchema = z.object({
   name: z.string().min(1, { message: "Name is required" }),
   subject: z.string().min(1, { message: "Subject is required" }),
