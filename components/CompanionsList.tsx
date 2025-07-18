@@ -16,10 +16,14 @@ interface CompanionsListProps {
   title: string;
   classNames?: string;
 }
-const CompanionsList = ({ companions }: CompanionsListProps) => {
+const CompanionsList = ({
+  companions,
+  title,
+  classNames,
+}: CompanionsListProps) => {
   return (
-    <article className="companion-list">
-      <h2 className="text-3xl font-bold">Recent Sessions</h2>
+    <article className={`companion-list ${classNames}`}>
+      <h2 className="text-3xl font-bold">{title}</h2>
       <Table>
         <TableHeader>
           <TableRow>
