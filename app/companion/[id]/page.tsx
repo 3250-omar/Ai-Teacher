@@ -40,14 +40,19 @@ const CompanionSession = async ({ params }: CompanionSessionPageProps) => {
             <p className="text-lg">{topic}</p>
           </div>
         </div>
-        <div className="items-start text-xl max-md:hidden font-semibold">
-          <span
-            style={{ color: getSubjectColor(subject) }}
-            className="font-bold text-2xl"
-          >
-            {duration}
-          </span>{" "}
-          Minutes
+        <div className="flex items-center gap-4 flex-col max-md:hidden">
+          <div className="items-start text-xl  font-semibold">
+            <span
+              style={{ color: getSubjectColor(subject) }}
+              className="font-bold text-2xl"
+            >
+              {duration}
+            </span>{" "}
+            Minutes
+          </div>
+          <div className="text-xl font-bold">
+            Voice: <span style={{ color: "skyblue" }}>{voice}</span>
+          </div>
         </div>
       </article>
       <CompanionComponents

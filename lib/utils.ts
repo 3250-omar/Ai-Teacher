@@ -11,10 +11,18 @@ export const getSubjectColor = (subject: string) => {
 };
 
 export const configureAssistant = (voice: string, style: string) => {
-  const voiceId =
-    voices[voice as keyof typeof voices][
-      style as keyof (typeof voices)[keyof typeof voices]
-    ] || "sarah";
+  // const voiceId =
+  //   voices[voice as keyof typeof voices][
+  //     style as keyof (typeof voices)[keyof typeof voices]
+  //   ] || "sarah";
+
+  const check = style ==="informal" 
+  let voiceId
+if(check){
+  voiceId = voices[voice as keyof typeof voices].casual
+}else{
+  voiceId = voices[voice as keyof typeof voices].formal
+}
 
   const vapiAssistant: CreateAssistantDTO = {
     name: "Companion",

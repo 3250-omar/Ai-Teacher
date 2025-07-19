@@ -1,9 +1,19 @@
-import React from 'react'
+"use client";
+import Lottie from "lottie-react";
+import React from "react";
+import soundWaves from "../constants/soundwaves.json";
 
-const loading = () => {
+const Loading = () => {
   return (
-    <div>loading............</div>
-  )
-}
+    <div className="flex w-full h-screen justify-center items-center">
+      {" "}
+      <Lottie
+        animationData={soundWaves}
+        autoPlay={true}
+        className="loading-lottie"
+      />
+    </div>
+  );
+};
 
-export default loading
+export default Loading;

@@ -43,6 +43,7 @@ const CompanionComponents = ({
   }, [lottieRef, isSpeaking]);
   useEffect(() => {
     const onCallStart = () => setCallStatus(call.ACTIVE);
+
     const onCallEnd = () => {
       setCallStatus(call.ENDED);
       //addToHistory

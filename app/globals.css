@@ -193,6 +193,9 @@ body {
   .companion-lottie {
     @apply size-[300px] max-sm:size-[100px];
   }
+  .loading-lottie {
+    @apply size-[500px] max-sm:size-[300px];
+  }
 
   .user-section {
     @apply flex flex-col gap-4 w-1/3 max-sm:w-full max-sm:flex-row;
