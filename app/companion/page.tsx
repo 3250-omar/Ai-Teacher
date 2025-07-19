@@ -1,4 +1,3 @@
-export const dynamic = "force-dynamic";
 import CompanionCard from "@/components/CompanionCard";
 import FilterSubject from "@/components/FilterSubject";
 import SearchInput from "@/components/SearchInput";
