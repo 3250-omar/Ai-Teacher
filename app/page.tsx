@@ -6,7 +6,6 @@ import {
   getRecentSessions,
 } from "@/lib/actions/companion-action";
 import { getSubjectColor } from "@/lib/utils";
-import { get } from "http";
 
 const Page = async () => {
   const companions = await getAllCompanions({ limit: 3 });
