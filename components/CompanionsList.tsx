@@ -33,6 +33,13 @@ const CompanionsList = ({
           </TableRow>
         </TableHeader>
         <TableBody>
+          {!companions?.length && (
+            <TableRow>
+              <TableCell colSpan={3} className="text-2xl font-bold underline">
+                No companions Yet , add your First
+              </TableCell>
+            </TableRow>
+          )}
           {companions?.map(({ id, subject, duration, name, topic }) => (
             <TableRow key={id}>
               <TableCell className="font-medium">

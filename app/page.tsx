@@ -1,4 +1,3 @@
-export const dynamic = "force-dynamic";
 import CompanionCard from "@/components/CompanionCard";
 import CompanionsList from "@/components/CompanionsList";
 import CTA from "@/components/CTA";
@@ -7,11 +6,12 @@ import {
   getRecentSessions,
 } from "@/lib/actions/companion-action";
 import { getSubjectColor } from "@/lib/utils";
+import { auth } from "@clerk/nextjs/server";
 
 const Page = async () => {
   const companions = await getAllCompanions({ limit: 3 });
-  const recentlySessions = await getRecentSessions();
-  ``;
+  const { userId } = await auth();
+  const recentlySessions = await getRecentSessions(10, userId || "");
 
   return (
     <main>
@@ -28,7 +28,7 @@ const Page = async () => {
       <section className="home-section">
         <CompanionsList
           companions={recentlySessions}
-          title="Recently Completed Sessions"
+          title="Your Recently Completed Sessions"
           classNames={"w-2/3 max-lg:w-full"}
         />
         <CTA />
