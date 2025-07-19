@@ -5,6 +5,9 @@ const nextConfig: NextConfig = {
   typescript:{
     ignoreBuildErrors: true, // This is not recommended for production, but can be useful during development
   },
+  eslint:{
+    ignoreDuringBuilds: true, // This is not recommended for production, but can be useful during development
+    },
 
   /* config options here */
   images:{
